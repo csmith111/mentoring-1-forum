@@ -10,7 +10,9 @@
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "mongoose": "^4.9.1"
+    "mongoose": "^4.9.1",
+    "mongoose-paginate": "^5.0.3",
+    "pug": "^2.0.0-beta11"
   },
   "eslintConfig": {
     "env": {
@@ -29,8 +31,12 @@
   },
   "devDependencies": {
     "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^2.1.1"
   },
   "scripts": {
