@@ -1,7 +1,22 @@
 doctype html 
 html
-  include header.pug
-  body
-    h12= message
+    include header.pug
+  
+    body
+        div
+            table(class='table table-striped')
+                thead
+                    tr: th Topic
+                        th Text
+                        th Created At
+                        th Created By
+
+                tbody
+                    each topic in topics
+                        tr
+                            td #{topic.topic} 
+                            td #{topic.text}
+                            td #{topic.createdAt}
+                            td #{topic.user.name}
 
     include footer.pug

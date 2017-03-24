@@ -1,10 +1,10 @@
-table, th, td {
-   border: 1px solid black;
+
+
+table{
+    background-color:"#80b3ff";
+    border: 1px solid black;
 }
 
- myTable{
-    background-color:"#80b3ff";
-}
 .table-striped>tbody>tr:nth-child(even)>td{
     background-color:#e6f0ff;
 }

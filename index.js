@@ -9,6 +9,7 @@ const app = express()
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, '/src/views'))
 
+mongoose.Promise = global.Promise
 // connect to our database - DB_CONNECTION_STRING defined in .env file
 mongoose.connect(process.env.DB_CONNECTION_STRING)
 
