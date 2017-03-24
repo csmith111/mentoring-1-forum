@@ -1,7 +1,4 @@
-doctype html 
-html
-  include header.pug
-  body
-    h12= message
+extends layout
 
-    include footer.pug
+block content
+    h12= message

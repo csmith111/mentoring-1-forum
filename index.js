@@ -3,6 +3,8 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const pageRoutes = require('./src/routes/page-routes')
+const actionRoutes = require('./src/routes/action-routes')
+
 require('dotenv').config()
 
 const app = express()
@@ -16,8 +18,8 @@ mongoose.connect(process.env.DB_CONNECTION_STRING)
 // configure body-parser
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use('/pages', pageRoutes) // This where we insert the router middleware
-
+app.use('/pages', pageRoutes)
+app.use('/actions', actionRoutes)
 app.set('port', process.env.PORT || 3000)
 
 const server = app.listen(app.get('port'), () => {
