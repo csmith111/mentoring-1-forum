@@ -4,7 +4,7 @@
   "description": "Code for a JavaScritp based Forum application",
   "main": "index.js",
   "repository": "https://github.com/serge-nikitin/mentoring-1-forum.git",
-  "author": "C Smith <codesmith111@gmail.com>",
+  "author": "V Jay <codesmith111@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
