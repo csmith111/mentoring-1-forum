@@ -40,7 +40,8 @@
     "eslint-plugin-standard": "^2.1.1"
   },
   "scripts": {
-    "start": "node index.js",
-    "debug": "nodemon --inspect index"
+    "start": "node ./src/index.js",
+    "debug": "nodemon --inspect ./src/index",
+    "eslint": "eslint src"
   }
 }

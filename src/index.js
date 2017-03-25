@@ -2,8 +2,8 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const pageRoutes = require('./src/routes/page-routes')
-const actionRoutes = require('./src/routes/action-routes')
+const pageRoutes = require('./routes/page-routes')
+const actionRoutes = require('./routes/action-routes')
 
 require('dotenv').config()
 
