@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h3 Add Topic
+
+    form(action="/actions/addTopic", method="post")
+        input(name="topic", placeholder="topic", style="width: 300px", type="text")
+        br
+        br
+        textarea( name="text", placeholder="text", style="width: 300px")
+        br
+        br
+        input(name="userName", placeholder="user", style="width: 300px", type="text")
+        br
+        br
+        input(type="submit" value="Add Topic")

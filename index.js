@@ -20,6 +20,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/pages', pageRoutes)
 app.use('/actions', actionRoutes)
+app.get('/', (req, res) => {
+    res.redirect('/pages/topics')
+})
 app.set('port', process.env.PORT || 3000)
 
 const server = app.listen(app.get('port'), () => {

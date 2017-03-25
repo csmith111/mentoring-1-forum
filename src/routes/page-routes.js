@@ -9,10 +9,11 @@ async function topics(req, res) {
 }
 
 async function addTopic(req, res) {
-    res.render('addTopic', { title: 'Add Topics', message: 'This is the form to add new topics' })
+    res.render('add-topic', { title: 'Add Topics', message: 'This is the form to add new topics' })
 }
 
 router.get('/topics', topics)
 router.get('/addTopic', addTopic)
+
 
 module.exports = router

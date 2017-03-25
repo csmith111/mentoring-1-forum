@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const User = require('./user')
+
 // const mongoosePaginate = require('mongoose-paginate')
 
 const userSchema = new mongoose.Schema({
@@ -16,11 +18,10 @@ const forumTopicSchema = new mongoose.Schema({
     topic: { type: String, required: true },
     text: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
-    user: { type: userSchema },
+    user: { type: User, ref: 'User' },
     comments: [commentSchema],
 })
 
 // forumTopicsSchema.plugin(mongoosePaginate)
 const Topic = mongoose.model('Topic', forumTopicSchema)
-const User = mongoose.model('User', userSchema)
-module.exports = { Topic, User }
+module.exports = { Topic }
