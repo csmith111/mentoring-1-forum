@@ -4,6 +4,9 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const pageRoutes = require('./routes/page-routes')
 const actionRoutes = require('./routes/action-routes')
+const logger = require('winston')
+
+require('../config/winston-config')()
 
 require('dotenv').config()
 
@@ -25,6 +28,7 @@ app.get('/', (req, res) => {
 })
 app.set('port', process.env.PORT || 3000)
 
+logger.level = 'info'
 const server = app.listen(app.get('port'), () => {
-    console.log(`Express server listening on port ${server.address().port}`)
+    logger.info(`Express server listening on port ${server.address().port}`)
 })
