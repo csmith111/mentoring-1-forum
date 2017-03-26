@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 })
 app.set('port', process.env.PORT || 3000)
 
-logger.level = 'info'
+logger.level = process.env.LOGGER_LEVEL
 const server = app.listen(app.get('port'), () => {
     logger.info(`Express server listening on port ${server.address().port}`)
 })
